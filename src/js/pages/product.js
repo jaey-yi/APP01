@@ -1,14 +1,6 @@
-const $ = (selector) => document.querySelector(selector);
+import { $ } from "../utils/dom.js"; //외부 동작
 
-// 저장소 객체
-const store = {
-  setlocalStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-  },
-  getlocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key));
-  },
-};
+import { store } from "../../js/store/store.js";
 
 function Product() {
   //상태관리 변수1. 도서상태
